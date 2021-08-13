@@ -13,9 +13,9 @@
 	[x] props
 	[x] Loop through gallery
 [ ] Gallery Item
-	[ ] Create component
-	[ ] Pass individual Gallery
-	[ ] Update Gallery list to use the component to display image
+	[x] Create component
+	[x] Pass individual Gallery
+	[x] Update Gallery list to use the component to display image
 	[ ] Swap image with description on click
 	[ ] Display number of likes
 	[ ] Axios to up update PUT

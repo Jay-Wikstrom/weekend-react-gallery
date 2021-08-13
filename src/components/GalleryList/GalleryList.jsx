@@ -1,18 +1,21 @@
+import GalleryItem from '../GalleryItem/GalleryItem'
+
 function GalleryList({ photoList }) {
 
     return (
         <div>
             <h2>My Gallery</h2>
-            {photoList.map(photo => {
+            {photoList.map((photo)=> {
                 return (
-                    <div 
-                        key={photo.id}>
-                        <img src={photo.path} />
-                    </div>
-                );
+                        <GalleryItem 
+                        key={photo.id} 
+                        photo={photo}
+                    />
+                )
             })}
         </div>
     );
+
 }
 
 export default GalleryList;
