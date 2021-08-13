@@ -7,7 +7,6 @@
 	[x] path
 [x] npm install
 
-[ ] App
 [x] GalleryList
 	[x] Create Component
 	[x] props
@@ -17,8 +16,8 @@
 	[x] Pass individual Gallery
 	[x] Update Gallery list to use the component to display image
 	[ ] Swap image with description on click
-	[ ] Display number of likes
-	[ ] Axios to up update PUT
-	[ ] Update gallery each time button is clicked
+	[x] Display number of likes
+	[x] Axios to up update PUT
+	[x] Update gallery each time button is clicked
 
 [x] Get axios stored in App.js

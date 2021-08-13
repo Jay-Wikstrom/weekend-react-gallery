@@ -28,6 +28,17 @@ function App() {
     })
   }
 
+  const updateLike = (photoId) => {
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${photoId}`
+    }).then(response => {
+      fetchPhotos()
+    }).catch(error => {
+      console.log('Error in likeClick')
+    })
+  }
+
     return (
       <div className="App">
         <header className="App-header">
@@ -37,7 +48,8 @@ function App() {
         {/* Render GalleryList component */}
         <GalleryList 
           //Pass photoList prop to photoList component
-          photoList={photoList} 
+          photoList={photoList}
+          updateLike={updateLike}
         />
       </div>
     );
