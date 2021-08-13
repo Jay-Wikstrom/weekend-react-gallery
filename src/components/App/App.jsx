@@ -22,6 +22,7 @@ function App() {
       method: 'GET',
       url: '/gallery'
     }).then(response => {
+      // Set photo list data from response
       setPhotoList(response.data);
     }).catch(error => {
       console.log('GET /Gallery error', error)

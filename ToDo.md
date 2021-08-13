@@ -11,11 +11,11 @@
 	[x] Create Component
 	[x] props
 	[x] Loop through gallery
-[ ] Gallery Item
+[x] Gallery Item
 	[x] Create component
 	[x] Pass individual Gallery
 	[x] Update Gallery list to use the component to display image
-	[ ] Swap image with description on click
+	[x] Swap image with description on click
 	[x] Display number of likes
 	[x] Axios to up update PUT
 	[x] Update gallery each time button is clicked
