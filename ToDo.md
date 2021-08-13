@@ -8,10 +8,10 @@
 [x] npm install
 
 [ ] App
-[ ] GalleryList
-	[ ] Create Component
-	[ ] props
-	[ ] Loop through gallery
+[x] GalleryList
+	[x] Create Component
+	[x] props
+	[x] Loop through gallery
 [ ] Gallery Item
 	[ ] Create component
 	[ ] Pass individual Gallery
@@ -21,4 +21,4 @@
 	[ ] Axios to up update PUT
 	[ ] Update gallery each time button is clicked
 
-[ ] Get axios stored in App.js
+[x] Get axios stored in App.js
