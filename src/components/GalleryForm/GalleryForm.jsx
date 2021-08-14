@@ -1,4 +1,7 @@
 import {useState} from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Button } from '@material-ui/core';
+
 
 function CreateGallery({ onCreateGallery}){
     const [newTitle, setNewTitle] = useState('');
@@ -21,28 +24,31 @@ function CreateGallery({ onCreateGallery}){
 
     return (
         <form onSubmit={onFormSubmit}>
-            <input 
-                type="text"
+            <TextField
+                id="outlined-basic"
+                variant="outlined"
                 placeholder="Photo Title"
                 value={newTitle}
                 onChange={e => setNewTitle(e.target.value)}
             />
 
-            <input 
-                type="text"
+            <TextField
+                id="outlined-basic"
+                variant="outlined"
                 placeholder="Url Path"
                 value={newPath}
                 onChange={e => setNewPath(e.target.value)}
             />
 
-            <input 
-                type="text"
+            <TextField
+                id="outlined-basic"
+                variant="outlined"
                 placeholder="Photo Description"
                 value={newDescription}
                 onChange={e => setNewDescription(e.target.value)}
             />
 
-        <button>Add to Gallery</button>
+           <button variant="outlined" color="primary" size="large">Add to Gallery</button>
         </form>
     )
 }

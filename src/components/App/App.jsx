@@ -1,10 +1,14 @@
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
+import '../GalleryItem/GalleryItem.css'
 import GalleryForm from '../GalleryForm/GalleryForm';
+// import Grid from '@material-ui/core/Grid';
+// import { Button } from '@material-ui/core';
+import React from 'react';
 
 //Object destructuring
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function App() {
@@ -99,7 +103,7 @@ function App() {
         />
 
         {/* Render GalleryList component */}
-        <GalleryList 
+        <GalleryList
           //Pass photoList prop to photoList component
           photoList={photoList}
           likeItem={likeItem}
