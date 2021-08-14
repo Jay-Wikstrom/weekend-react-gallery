@@ -21,3 +21,15 @@
 	[x] Update gallery each time button is clicked
 
 [x] Get axios stored in App.js
+
+##### Stretch Goals
+[x] Move data into a database
+	[x] Name database 'react_gallery'
+	[x] include database.sql
+
+[x] Add a form (new component) that allows a user to POST a new gallery item
+	[x] Client side form (use absolute URL for images)
+	[x] Server Side route for post image
+[x] Ability to delete gallery
+[ ] Add styling with Material-UI
+[ ] Implement uppy for image upload

@@ -1,6 +1,6 @@
 import GalleryItem from '../GalleryItem/GalleryItem'
 
-function GalleryList({ photoList, updateLike}) {
+function GalleryList({ photoList, likeItem, deleteItem}) {
     // Loop through and render
     return (
         <div>
@@ -10,7 +10,8 @@ function GalleryList({ photoList, updateLike}) {
                     <GalleryItem 
                         key={photo.id} 
                         photo={photo}
-                        updateLike={updateLike}
+                        setIdToLike={likeItem}
+                        setIdToDelete={deleteItem}
                     />
                 )
             })}

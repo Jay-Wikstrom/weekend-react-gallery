@@ -1,6 +1,7 @@
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 //Object destructuring
 import React, { useState, useEffect } from 'react';
@@ -29,14 +30,61 @@ function App() {
     })
   }
 
-  const updateLike = (photoId) => {
+
+  //POST
+  const postPhoto = (newPhoto) => {
+    //e.preventDefault();
+    console.log('in postItem')
+
+    axios({
+      method: 'POST',
+      url: '/gallery',
+      data: newPhoto
+    }).then(response => {
+      console.log('POST /item', response);
+
+      fetchPhotos();
+    }).catch(error => {
+      console.log('POST /item failed', error);
+    });
+  };
+
+
+  // const updateLike = (photoId) => {
+  //   axios({
+  //     method: 'PUT',
+  //     url: `/gallery/like/${photoId}`,
+  //     data: {likes: +1}
+  //   }).then(response => {
+  //     fetchPhotos()
+  //   }).catch(error => {
+  //     console.log('Error in likeClick')
+  //   })
+  // }
+
+  //PUT
+  const likeItem = (idToLike) => {
+    console.log('id', idToLike.id)
+    console.log('id', idToLike)
+
     axios({
       method: 'PUT',
-      url: `/gallery/like/${photoId}`
-    }).then(response => {
+      url: `/gallery/` + idToLike.id,
+    }).then(function (res) {
       fetchPhotos()
-    }).catch(error => {
-      console.log('Error in likeClick')
+    })
+  }
+
+  //DELETE
+  const deleteItem = (idToDelete) => {
+    console.log('id', idToDelete.id)
+    console.log('id', idToDelete)
+
+    axios({
+      method: 'DELETE',
+      url: `/gallery/` + idToDelete.id
+    }).then(function (res) {
+      fetchPhotos()
     })
   }
 
@@ -46,12 +94,19 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
 
+        <GalleryForm
+          onCreateGallery={postPhoto}
+        />
+
         {/* Render GalleryList component */}
         <GalleryList 
           //Pass photoList prop to photoList component
           photoList={photoList}
-          updateLike={updateLike}
+          likeItem={likeItem}
+          deleteItem={deleteItem}
         />
+
+        
       </div>
     );
 } //end app function
