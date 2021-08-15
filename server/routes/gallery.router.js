@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
-//const galleryItems = require('../modules/gallery.data');
 const pool = require('../modules/pool.js')
-
-// DO NOT MODIFY THIS FILE FOR BASE MODE
-
-
 
 // GET Route
 router.get('/', (req, res) => {
@@ -22,8 +17,6 @@ router.get('/', (req, res) => {
             console.log('GET error', error);
             res.sendStatus(500);
         })
-    //res.send(galleryItems);
-    //ksdnks
 }); // END GET Route
 
 //POST 
@@ -55,8 +48,6 @@ router.post('/', (req, res) => {
         });
 });
 
-
-
 // PUT Route
 router.put('/:id', (req, res) => {
     
@@ -76,20 +67,6 @@ router.put('/:id', (req, res) => {
             console.log('PUT error in route.PUT', error)
             res.sendStatus(500);
         });
-    
-    
-    
-    
-    
-    
-    // console.log(req.params);
-    // const galleryId = req.params.id;
-    // for (const galleryItem of galleryItems) {
-    //     if (galleryItem.id == galleryId) {
-    //         galleryItem.likes += 1;
-    //     }
-    // }
-    // res.sendStatus(200);
 }); // END PUT Route
 
 

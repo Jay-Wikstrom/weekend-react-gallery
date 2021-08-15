@@ -37,7 +37,6 @@ return (
         }
         
         <br />
-        {/* <button onClick={() => {updateLike(photo.id)}}>Like </button> */}
 
         <Button variant="contained" color="primary"><button value={photo.id} onClick={onLikeClick}>Like</button></Button>
         <Button variant="contained" color="secondary"><button value={photo.id} onClick={onRemoveClick}>Remove</button></Button>

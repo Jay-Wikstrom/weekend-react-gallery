@@ -52,9 +52,6 @@ function App() {
 
   //PUT
   const likeItem = (idToLike) => {
-    console.log('id', idToLike.id)
-    console.log('id', idToLike)
-
     axios({
       method: 'PUT',
       url: `/gallery/` + idToLike.id,
@@ -65,9 +62,6 @@ function App() {
 
   //DELETE
   const deleteItem = (idToDelete) => {
-    console.log('id', idToDelete.id)
-    console.log('id', idToDelete)
-
     axios({
       method: 'DELETE',
       url: `/gallery/` + idToDelete.id

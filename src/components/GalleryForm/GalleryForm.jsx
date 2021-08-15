@@ -21,6 +21,7 @@ function CreateGallery({ onCreateGallery}){
             description: newDescription
         }
         onCreateGallery(newPhoto);
+        
         //Clear inputs
         setNewDescription('');
         setNewPath('');
