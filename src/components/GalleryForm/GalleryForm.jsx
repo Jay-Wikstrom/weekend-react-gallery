@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 
 
 function CreateGallery({ onCreateGallery}){
+    //States for input on form
     const [newTitle, setNewTitle] = useState('');
     const [newPath, setNewPath] = useState('');
     const [newDescription, setNewDescription] = useState('');
@@ -13,12 +14,17 @@ function CreateGallery({ onCreateGallery}){
 
         console.log('on submit' , newTitle, newPath, newDescription)
 
+        //Object data to send to server
         let newPhoto = {
             title: newTitle,
             path: newPath,
             description: newDescription
         }
         onCreateGallery(newPhoto);
+        //Clear inputs
+        setNewDescription('');
+        setNewPath('');
+        setNewTitle('')
     }
 
 

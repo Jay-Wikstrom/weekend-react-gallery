@@ -3,8 +3,10 @@ import { Button } from '@material-ui/core';
 
 
 function GalleryItem({ photo, setIdToLike, setIdToDelete}){
+    //Track if picture has been clicked or not
     const [pictureClicked, setPictureClicked] = useState(false) 
 
+    //Remove photo function
     const onRemoveClick = (e) => {
         let idToDelete = {
             id: e.target.value
@@ -12,6 +14,7 @@ function GalleryItem({ photo, setIdToLike, setIdToDelete}){
         setIdToDelete(idToDelete)
     }
 
+    //Like photo function
     const onLikeClick = (e) => {
         let idToLike = {
             id: e.target.value
@@ -19,12 +22,11 @@ function GalleryItem({ photo, setIdToLike, setIdToDelete}){
         setIdToLike(idToLike)
     }
     
-    function photoClicked(){
+    const photoClicked =() => {
         // Change false to true to set picture to description 
         pictureClicked ? setPictureClicked(false) : setPictureClicked(true)
     } 
 return (
-
     <div className="img-container">
 
         {/* Change from pic to description */}

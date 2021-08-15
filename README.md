@@ -1,9 +1,9 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Weekend React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+I created an app with react that has pictures, and titles that are displayed on the DOM.
+You get a description of the picture when the picture is clicked.  The user can add their 
+own title picture and description.

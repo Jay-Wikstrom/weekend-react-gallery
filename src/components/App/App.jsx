@@ -19,8 +19,9 @@ function App() {
   }, []);
 
 
+  //GET
   const fetchPhotos = () => {
-    console.log('In Get');
+    //Request gallery data from server
     axios({
       method: 'GET',
       url: '/gallery'
@@ -35,9 +36,6 @@ function App() {
 
   //POST
   const postPhoto = (newPhoto) => {
-    //e.preventDefault();
-    console.log('in postItem')
-
     axios({
       method: 'POST',
       url: '/gallery',
@@ -45,6 +43,7 @@ function App() {
     }).then(response => {
       console.log('POST /item', response);
 
+      //Refresh Dom
       fetchPhotos();
     }).catch(error => {
       console.log('POST /item failed', error);
