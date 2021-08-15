@@ -31,5 +31,5 @@
 	[x] Client side form (use absolute URL for images)
 	[x] Server Side route for post image
 [x] Ability to delete gallery
-[ ] Add styling with Material-UI
+[x] Add styling with Material-UI
 [ ] Implement uppy for image upload

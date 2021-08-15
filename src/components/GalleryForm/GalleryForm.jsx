@@ -48,7 +48,7 @@ function CreateGallery({ onCreateGallery}){
                 onChange={e => setNewDescription(e.target.value)}
             />
 
-           <button variant="outlined" color="primary" size="large">Add to Gallery</button>
+            <button variant="outlined" color="primary" size="large">Add to Gallery</button>
         </form>
     )
 }

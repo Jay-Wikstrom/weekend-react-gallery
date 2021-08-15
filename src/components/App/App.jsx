@@ -3,8 +3,6 @@ import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
 import '../GalleryItem/GalleryItem.css'
 import GalleryForm from '../GalleryForm/GalleryForm';
-// import Grid from '@material-ui/core/Grid';
-// import { Button } from '@material-ui/core';
 import React from 'react';
 
 //Object destructuring
@@ -53,19 +51,6 @@ function App() {
     });
   };
 
-
-  // const updateLike = (photoId) => {
-  //   axios({
-  //     method: 'PUT',
-  //     url: `/gallery/like/${photoId}`,
-  //     data: {likes: +1}
-  //   }).then(response => {
-  //     fetchPhotos()
-  //   }).catch(error => {
-  //     console.log('Error in likeClick')
-  //   })
-  // }
-
   //PUT
   const likeItem = (idToLike) => {
     console.log('id', idToLike.id)
@@ -109,8 +94,6 @@ function App() {
           likeItem={likeItem}
           deleteItem={deleteItem}
         />
-
-        
       </div>
     );
 } //end app function

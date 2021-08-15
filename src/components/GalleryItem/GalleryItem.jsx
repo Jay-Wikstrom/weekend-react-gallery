@@ -6,7 +6,6 @@ function GalleryItem({ photo, setIdToLike, setIdToDelete}){
     const [pictureClicked, setPictureClicked] = useState(false) 
 
     const onRemoveClick = (e) => {
-        console.log('Remove button clicked');
         let idToDelete = {
             id: e.target.value
         }
@@ -14,7 +13,6 @@ function GalleryItem({ photo, setIdToLike, setIdToDelete}){
     }
 
     const onLikeClick = (e) => {
-        console.log('Remove button clicked');
         let idToLike = {
             id: e.target.value
         }
@@ -35,13 +33,12 @@ return (
                 <div className="gallery-desc"><p onClick={photoClicked}>{photo.description}</p></div> :
                 <img className="gallery-img" src={photo.path} onClick={photoClicked} />
         }
-
         
         <br />
         {/* <button onClick={() => {updateLike(photo.id)}}>Like </button> */}
 
-        <button variant="contained" color="primary" value={photo.id} onClick={onLikeClick}>Like</button>
-        <button variant="contained" color="secondary" value={photo.id} onClick={onRemoveClick}>Remove</button>
+        <Button variant="contained" color="primary"><button value={photo.id} onClick={onLikeClick}>Like</button></Button>
+        <Button variant="contained" color="secondary"><button value={photo.id} onClick={onRemoveClick}>Remove</button></Button>
         <br />
         <span className="likeThis">{photo.likes} people like this</span>
         
