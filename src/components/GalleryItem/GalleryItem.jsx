@@ -38,8 +38,11 @@ return (
         
         <br />
 
-        <Button variant="contained" color="primary"><button value={photo.id} onClick={onLikeClick}>Like</button></Button>
-        <Button variant="contained" color="secondary"><button value={photo.id} onClick={onRemoveClick}>Remove</button></Button>
+        {/* Not sure why but cannot figure out why my onClick function wont work with these material-ui buttons
+            <Button variant="contained" color="primary" value={photo.id} onClick={onLikeClick}></Button>
+        */}
+        <button className="likeBtn" value={photo.id} onClick={onLikeClick}>Like</button>
+        <button className="deleteBtn" value={photo.id} onClick={onRemoveClick}>Remove</button>
         <br />
         <span className="likeThis">{photo.likes} people like this</span>
         

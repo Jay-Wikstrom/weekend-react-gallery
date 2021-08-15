@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
+import '../GalleryForm/GalleryForm.css'
 
 
 function CreateGallery({ onCreateGallery}){
@@ -55,7 +56,7 @@ function CreateGallery({ onCreateGallery}){
                 onChange={e => setNewDescription(e.target.value)}
             />
 
-            <button variant="outlined" color="primary" size="large">Add to Gallery</button>
+            <button className="addBtn">Add to Gallery</button>
         </form>
     )
 }
