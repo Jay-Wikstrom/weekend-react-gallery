@@ -34,4 +34,4 @@ Axios
 React
 
 Acknowledgement
-Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. (Thank your people)
+Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. 
