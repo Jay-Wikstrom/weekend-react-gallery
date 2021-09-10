@@ -15,7 +15,8 @@ They can also like a picture or remove a picture.
 ![Screen Shot 2021-09-10 at 12 06 13 AM](https://user-images.githubusercontent.com/82717484/132803125-c4416860-3161-4425-8a87-5c3009280766.png)
 
 
-##Installation
+Installation: 
+
 Here are the steps to get this app running on your own machine:
 
 Create a database named react_gallery,
@@ -26,7 +27,8 @@ Run npm run client in your terminal
 The npm run client command will open up a new browser tab for you!
 
 
-##Built With
+Built With:
+
 CSS/HTML
 JavaScript
 Express
